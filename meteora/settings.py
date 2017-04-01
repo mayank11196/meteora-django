@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'meteoradb',
-        'USER' 'djangoadmin',
+        'USER': 'djangoadmin',
         'PASSWORD': 'mayank',
         'HOST': 'localhost',
         'PORT': '',
