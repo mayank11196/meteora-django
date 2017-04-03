@@ -1,5 +1,12 @@
-{% if user_name and password %}
-	<p>Hello {{user_name}}</p>>
-{% else %}
-	<p>Hello stranger </p>
-{% endif %}
+<html>
+<head>
+    <title>User login</title>
+</head>
+<body>
+    <form action="/user/login/" method="get">
+        <p><input type="text" name="user_name"></p>
+        <p><input type="text" name="password"></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

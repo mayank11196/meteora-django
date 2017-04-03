@@ -1,6 +1,6 @@
 from django.shortcuts import render
-import datetime
+from .forms import UserForm
 
 def index(request):
-	now = datetime.datetime.now()
-	return render(request, 'index.html', {'date':now})
+	form = UserForm()
+	return render(request, 'index.html', {'form':form})

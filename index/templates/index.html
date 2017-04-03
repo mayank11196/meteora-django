@@ -1,2 +1,16 @@
-<p>This is the demo index page.</p>
-<p> The current time is {{date}}.</p>
+<html>
+<head>
+    <title>User registration</title>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form action="/user/login/" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% csrf_token %}
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
