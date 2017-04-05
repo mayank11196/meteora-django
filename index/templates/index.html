@@ -5,12 +5,20 @@
 <body>
     <h1>Register</h1>
 
+    <form action="/user/login/" method="get">
+        <table>
+            {{ l_form.as_table }}
+        </table>
+        <input type="submit" value="Login">
+    </form>
+    
     <form action="/user/login/" method="post">
         <table>
-            {{ form.as_table }}
+            {{ r_form.as_table }}
         </table>
         {% csrf_token %}
         <input type="submit" value="Register">
     </form>
+    
 </body>
 </html>
