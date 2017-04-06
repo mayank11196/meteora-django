@@ -11,7 +11,7 @@ def query_search(request):
 	return render(request, 'query.html', {'form':form})
 
 
-def api_request(**kwargs):
+def api_request(payload):
 	main_url = 'https://data.nasa.gov/resource/y77d-th95.json'
 
 	app_token = None
@@ -19,8 +19,6 @@ def api_request(**kwargs):
 		header = {'Accept': 'application/json', 'X-App-Token': app_token}
 	else:
 		header = {'Accept': 'application/json'}
-
-	payload = kwargs
 
 	response = requests.get(main_url, params=payload, headers=header)
 
@@ -30,6 +28,6 @@ def api_request(**kwargs):
 
 
 def search_result(request):
-	data = dict(request.GET)
-	return HttpResponse(api_request(name=data['name']))
+	data = request.GET
+	return HttpResponse(api_request(data))
 
