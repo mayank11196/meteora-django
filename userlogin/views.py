@@ -1,12 +1,17 @@
-from django.shortcuts import render
-from .models import User
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from .forms import UserSignupForm
 
 
-def login(request):
-	if 'first_name' in request.POST:
+def signup(request):
+	if request.method=='POST':
 		data = request.POST
-		user = User(f_name=data['first_name'], l_name=data['last_name'], user_name=data['username'])
+		user = User(username=data['username'], email=data['email'], password=data['password'])
 		user.save()
-		return render(request, 'userprofile.html', {'user_name':data['first_name']})
-	else:
-		return render(request, 'userprofile.html', {'user_name':'Stranger'})
+		return redirect('/search')
+
+
+	elif request.method=='GET':
+		form = UserSignupForm()
+		return render(request, 'register.html', {'r_form': form})
+
