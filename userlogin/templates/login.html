@@ -3,9 +3,10 @@
     <title>User login</title>
 </head>
 <body>
-    <form action="/search" method="get">
+    <form method="post">
         <p><input type="text" name="user_name"></p>
         <p><input type="text" name="password"></p>
+        {% csrf_token%}
         <input type="submit" value="Login">
     </form>
 </body>
