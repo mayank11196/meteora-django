@@ -3,9 +3,10 @@ from django.http import HttpResponse
 import requests
 import json
 from .forms import QueryForm
+from django.contrib.auth.decorators import login_required
 
 
-
+@login_required(login_url='/register/login/')
 def query_search(request):
 	form = QueryForm()
 	return render(request, 'query.html', {'form':form})
