@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^register/', include('userlogin.urls')),
-    url(r'^search/', include('search.urls'), name='searchpage'),
+    url(r'^search/', include('search.urls')),
 ]
