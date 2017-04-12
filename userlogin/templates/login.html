@@ -3,9 +3,10 @@
     <title>User login</title>
 </head>
 <body>
-    <form method="post">
-        <p><input type="text" name="user_name"></p>
-        <p><input type="text" name="password"></p>
+    <form action="/register/login/" method="post">
+        <table>
+            {{l_form.as_table}}
+        </table>
         {% csrf_token%}
         <input type="submit" value="Login">
     </form>

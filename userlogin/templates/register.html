@@ -3,9 +3,11 @@
     <title>Sign-Up</title>
 </head>
 <body>
-    <form action="/register/signup" method="post">
-    	{% csrf_token %}
-        {{r_form}}
+    <form action="/register/signup/" method="post">
+    	<table>
+        {{r_form.as_table}}
+        </table>
+        {% csrf_token %}
         <input type="submit" value="Signup">
     </form>
 </body>
