@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'userlogin',
-    'index',
+    'home',
     'search',
+    'password_reset',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = '/search'
+LOGIN_URL = '/home/register/'
+#GOOGLE_RECAPTCHA_SECRET_KEY = "6Lc0ayAUAAAAAOcRuL_0i-iUJbcDgVeOU0l02mnF"
+
+###########Email Settings#########################
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'mayank11195@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mayank11195@gmail.com'
+EMAIL_HOST_PASSWORD = 'Mayank_11195'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
