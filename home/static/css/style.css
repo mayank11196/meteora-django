@@ -1,0 +1,31 @@
+ .jumbotron {
+	 background-color: #a3a375;
+	 padding-top:10px;
+}
+
+.navbar-right li a  {
+    padding-right:35px;
+}
+.navbar a:hover {
+    color: green; /* change border-color to green on hover */
+}
+.navbar-center {
+	float:none;
+	display:table;
+	table-layout: fixed;
+	margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 50px;
+}
+.btn-btn {
+	margin-left:550px;
+}
+#carousell
+{
+	margin-left:300px;
+}
+.navbar-right ul li:hover{
+      background-color: Orange;
+      transition: background-color 1s;
+    }
