@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'search',
-    'password_reset',
 ]
 
 MIDDLEWARE = [
