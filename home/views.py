@@ -6,10 +6,10 @@ from django.contrib.auth.decorators import login_required
 
 def register(request):
 	if request.method=='POST':
-		email = request.POST['email']
-		username = request.POST['username']
-		password1 = request.POST['password1']
-		password2 = request.POST['password2']
+		email = request.POST.get('email')
+		username = request.POST.get('username')
+		password1 = request.POST.get('password1')
+		password2 = request.POST.get('password2')
 
 		if password2==password1:
 			user = User.objects.create_user(username=username, email=email, password=password1)
@@ -28,8 +28,8 @@ def register(request):
 
 def login_view(request):
 	if request.method=='POST':
-		username = request.POST['username']
-		password = request.POST['password']
+		username = request.POST.get('username')
+		password = request.POST.get('password')
 		user = authenticate(username=username, password=password)
 		if user:
 			if user.is_active:
