@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -23,4 +22,5 @@ urlpatterns = [
     url(r'^$', include('home.urls')),
     url(r'^home/', include('home.urls')),
     url(r'^search/', include('search.urls')),
+    url(r'^mars/', include('mars.urls')),
 ]
