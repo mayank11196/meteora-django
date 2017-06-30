@@ -1,5 +1,5 @@
 # METEORA
-An interface to easily access the pictures provided by NASA/OpenData of outer space.
+An interface to easily access the pictures of outer space provided by NASA/OpenData.
 
 ## Features ##
 * User registration
