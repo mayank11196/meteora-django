@@ -30,7 +30,7 @@
 body, html{
 	height: 100%;
  	background-repeat: no-repeat;
- 	background:url(http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2015/03/asteroid_collision/15339990-1-eng-GB/Asteroid_collision.jpg);
+ 	background:url(/static/mars1.jpg);
  	font-family: 'Oxygen', sans-serif;
 	    background-size: cover;
 }
@@ -156,14 +156,19 @@ span.input-group-addon i {
                             <h1 class="tag-title" style="color:#d7edd7;margin-left:250px;">Meteora</h1>
                             <hr style="margin-left:300px;">
                             <p style="color:#d7edd7;font-size:24px;font-family:courier;width:640px;">
-						g elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus f
-							</p>
+			<strong>
+						A website powered by NASA/OpenData.
+						<br>Signup today to dive into an unforgetaable experience of space exploration and see amazing pictures of outer space everyday through "Picture Of The Day".
+						Or you can see all the pictures taken by Curiosity Mars Rover.
+						Filter by the camera or the date to seek what you are looking for.
+		  </p>
+			</strong>
                             <br/>
                         </div>
                     </div>
                 </div>
-				<div class="main-login main-center" style="margin-left:70%;">
-				<h3 class="text-center">Meteora</h3>
+				<div class="main-login main-center" style="margin-left:70%; margin-top: 3%;">
+				<h3 class="text-center"><strong>Meteora</strong></h3>
 					<form class="" method="post">
 						{% csrf_token %}
 						
@@ -210,12 +215,12 @@ span.input-group-addon i {
 						</div>
 
 						<div class="form-group ">
-						<a href="/home/register/"><button type="submit" class="btn btn-success btn-lg btn-block login-button">Register</button></a>
+						<a href="/home/register/"><button type="submit" class="btn btn-success btn-lg btn-block login-button"><strong>Register</strong></button></a>
 						</div>
-						<p class="text-center">Or</p>
+						<p class="text-center" style="font-size:18px;">OR</p>
 					</form>
 					<div class="form-group ">
-					<a href="/home/login/" type="button" class="btn btn-danger btn-lg btn-block login-button">Login</a>
+					<a href="/home/login/" type="button" class="btn btn-danger btn-lg btn-block login-button"><strong>Login</strong></a>
 					</div>
 				</div>
 			</div>

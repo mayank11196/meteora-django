@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<p>
+	<h1>Image Of The Day</h1>
+</p>
+
+<p>
+	<img src={{img}} style="max-width: 80%; height: 70%;" />
+</p>
+<p>{{title}}</p>
+
+<p>{{explanation}}</p>
+
+<p>Copyright {{copyright}}</p>
+
+{% endblock %}

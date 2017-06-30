@@ -30,7 +30,7 @@
 body, html{
 	height: 100%;
  	background-repeat: no-repeat;
- 	background:url(/static/mars.jpg);
+ 	background:url(/static/ab.jpg);
  	font-family: 'Oxygen', sans-serif;
 	    background-size: cover;
 }
@@ -138,76 +138,24 @@ span.input-group-addon i {
     </head>
     <body>
 	<nav class="navbar navbar-inverse" style="background-color:#222">
-			  <div class="container-fluid">
-				<div class="navbar-header">
-			<a class="navbar-brand" style="color:white;margin-left:10%;font-size:24px;" href="#"><strong>Meteora</strong></a>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-				  <li><a style="color:white;" href="#"><strong>About-Us</strong></a></li>
-				  <li><a style="color:white;"href="#"><strong>Contact-us</strong></a></li>
-				</ul>
-			  </div>
-			</nav>
-			<div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <div class="box">
-                        <div class="box-content">
-                            <h1 class="tag-title" style="color:#d7edd7;margin-left:250px;"><strong>Meteora</strong></h1>
-                            <hr style="margin-left:310px;">
-                            <p style="color:black;font-size:24px;font-family:courier;width:640px;">
-                            	<strong>
-						A website powered by NASA/OpenData.
-						<br><a href="/home/register/">Signup</a> today to dive into an unforgetaable experience of space exploration and see amazing pictures of outer space everyday through "Picture Of The Day".
-						Or you can see all the pictures taken by Curiosity Mars Rover.
-						Filter by the camera or the date to seek what you are looking for.
-		  </p>
-			</strong>
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-				<div class="main-login main-center" style="margin-left:70%;margin-top: 3%;">
-				<h3 class="text-center"><strong>Meteora</strong></h3>
-					<form class="" method="post">
-						{% csrf_token %}
-
-						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Username</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Password</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" style="color:blue;" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group ">
-						<a href="/home/login/"><button type="submit" class="btn btn-danger btn-lg btn-block login-button"><strong>Login</strong></button></a>
-						</div>
-
-						<p class="text-center" style="font-size:18px;">OR</p>
-						
-					</form>
-
-					<div class="form-group ">
-					<a href="/home/register/"><button type="submit" class="btn btn-success btn-lg btn-block login-button"><strong>Register</strong></button></a>
-					</div>
-
-				</div>
+		  <div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" style="color:white;margin-left:5%;font-size:24px;" href="/home/"><strong>Meteora</strong></a>
 			</div>
-		</div>
-		
+			<ul class="nav navbar-nav">
+				<li><a style="color:white;margin-left:45%;font-size:24px;" href="/mars/"><strong>Mars</strong></a></li> 
+				<li><a style="color:white;margin-left:55%;font-size:24px;" href="/meteorite/"><strong>Meteorite</strong></a></li> 
+				<li><a style="color:white;margin-left:48%;font-size:24px;" href="/profile/{{username}}/"><strong>{{username}}</strong></a></li> 
+				
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				  <li><a style="color:white;margin-left:0%;font-size:24px;" href="/home/logout/"><strong>logout<strong></a></li>
+			</ul>
+		  </div>
+	</nav>
+
+{% block content %}
+{% endblock %}		
 		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
