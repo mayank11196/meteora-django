@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .api import apod
 
 def register(request):
 	if request.method=='POST':
@@ -44,7 +45,16 @@ def login_view(request):
 
 @login_required
 def home(request):
-	return HttpResponse("Welcome to the home page")
+	user = request.user
+	userdetails = User.objects.get(id=user.id)
+	username = userdetails.username
+	data = apod.image()
+	img = data['hdurl']
+	title = data['title']
+	explanation = data['explanation']
+	copyright = data['copyright']
+	context = {"img": img, 'title': title, 'explanation': explanation, 'copyright': copyright, 'username': username}
+	return render(request, "apod.html", context)
 
 @login_required
 def logout_view(request):

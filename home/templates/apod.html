@@ -1,19 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style type="text/css">
+	.text-field{
+	border: 2px solid black;
+	width: 750px;
+}
+</style>
 
-
+<center>
 <p>
-	<h1>Image Of The Day</h1>
+	<br><strong><h1 style="font-family: coronet; color: #ff8316">Image Of The Day</strong></h1>
 </p>
 
 <p>
-	<img src={{img}} style="max-width: 80%; height: 70%;" />
+	<br><img src={{img}} style="width: 60%; height: 55%;" />
 </p>
-<p>{{title}}</p>
 
-<p>{{explanation}}</p>
+<p style="font-family: coronet; color: #ff8316">{{title}}</p>
 
-<p>Copyright {{copyright}}</p>
+<div class="text-field">
+<p style="font-family: coronet; color: #ff8316">{{explanation}}</p>
+</div>
+
+<p style="font-family: coronet; color: #ff8316"><br>Copyright {{copyright}}</p>
+</center>
 
 {% endblock %}
