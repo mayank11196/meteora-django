@@ -2,19 +2,27 @@
 
 {% block content %}
 
+<style type="text/css">
+       .text-field{
+	border: 2px solid #ff8316;
+	width: 650px;
+}
+</style>
+<center>
 <p>
-	<img src={{image}} style="max-width: 80%; height: 70%;" /> 
+	<br><strong><h1 style="font-family: coronet; color: #ff8316">Mars Through The Eyes Of Curiosity</strong></h1>
+</p>
+<p>
+	<br><img src={{image}} style="width: 50%; height: 55%;" /> 
 </p>
 
-<p>{{photo}}</p>
-<p>
-	<p>Rover: {{rover_name}}</p>
-	<p>Launch: {{launch_date}}</p>
-	<p>Land: {{landing_date}}</p>
-</p>
+<div class="text-field">
+	<br><p style="font-family: coronet; color: #514d4d">Rover: {{rover_name}}</p>
+	<p style="font-family: coronet; color: #514d4d">Launch: {{launch_date}}</p>
+	<p style="font-family: coronet; color: #514d4d">Land: {{landing_date}}</p>
+	<p style="font-family: coronet; color: #514d4d">Camera: {{camera_name}}  {{camera_full_name}}</p>
+</div>
 
-<p>
-	<p>Camera: {{camera_name}} : {{camera_full_name}}</p>
-</p>
+</center>
 
 {% endblock %}
